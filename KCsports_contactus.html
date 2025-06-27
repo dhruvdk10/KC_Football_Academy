@@ -1,239 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <title>Contact Us</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        text-decoration: none;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+    }
 
-      body {
-        background-image: url('https://www.hdwallpapers.in/thumbs/2020/black_white_football_in_net_in_chain_link_fence_background_hd_football-t2.jpg');
-        font-family: Verdana, sans-serif;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        color: white;
-        position: relative;
-        margin: 0;
-        padding: 0;
-        min-height: 100vh;
-      }
+    body {
+      background-image: url('https://www.hdwallpapers.in/thumbs/2020/black_white_football_in_net_in_chain_link_fence_background_hd_football-t2.jpg');
+      font-family: Verdana, sans-serif;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: white;
+      position: relative;
+      min-height: 100vh;
+    }
 
-      body::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url('https://www.hdwallpapers.in/thumbs/2020/black_white_football_in_net_in_chain_link_fence_background_hd_football-t2.jpg') no-repeat center center/cover;
-        filter: brightness(20%);
-        z-index: -1;
-      }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://www.hdwallpapers.in/thumbs/2020/black_white_football_in_net_in_chain_link_fence_background_hd_football-t2.jpg') no-repeat center center/cover;
+      filter: brightness(20%);
+      z-index: -1;
+    }
 
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .logo img {
+      height: 130px;
+      width: 130px;
+    }
+
+    .contact-container {
+      width: 90%;
+      max-width: 800px;
+      margin: 30px auto 200px auto;
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.75);
+      border-radius: 12px;
+      box-shadow: 0 0 10px white;
+    }
+
+    h1 {
+      text-align: center;
+      color: #00ffb3;
+      margin-bottom: 50px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 20px;
+      color: #C0C0C0;
+    }
+
+    hr {
+      width: 20%;
+      border: 1px solid #fff;
+      margin: 10px 0 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    textarea {
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: none;
+      margin-bottom: 15px;
+    }
+
+    input[type="submit"] {
+      padding: 12px;
+      background-color: #00ffb3;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 150px;
+      align-self: flex-start;
+    }
+
+    footer.footer {
+      background-color: #000000;
+      color: white;
+      padding: 20px 10px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    footer.footer a {
+      color: #00ffb3;
+      text-decoration: none;
+      margin: 0 8px;
+      display: inline-block;
+    }
+
+    footer.footer a:hover {
+      text-decoration: underline;
+    }
+
+    footer.footer .social-links {
+      display: inline;
+    }
+    @media screen and (max-width: 768px) {
       .logo {
-        display: flex;
-        align-items: center;
+        flex-direction: column;
+        text-align: center;
       }
-
 
       .logo img {
-        height: 130px;
-        width: 130px;
+        width: 100px;
+        height: 100px;
       }
 
       .contact-container {
-        width: 90%;
-        max-width: 800px;
-        margin: 0px auto;
-        padding: 30px;
-        background-color: rgba(0, 0, 0, 0.75);
-        border-radius: 12px;
-        box-shadow: 0 0 10px white;
-        margin-bottom: 300px;
+        padding: 20px;
+        margin-bottom: 120px;
       }
 
       h1 {
-        text-align: center;
-        color: #00ffb3;
-        margin-bottom: 100px;
-      }
-
-      .section {
-        margin-bottom: 40px;
-      }
-
-      h2 {
-        font-size: 20px;
-        color: #C0C0C0;
-      }
-
-      hr {
-        width: 20%;
-        border: 1px solid #fff;
-        margin: 10px 0 20px;
-      }
-
-      form {
-        display: flex;
-        flex-direction: column;
-      }
-
-      label {
-        margin-top: 15px;
-        margin-bottom: 5px;
+        font-size: 24px;
       }
 
       input[type="text"],
       textarea {
-        padding: 10px;
-        font-size: 14px;
-        border-radius: 6px;
-        border: none;
-        margin-bottom: 15px;
-      }
-
-      input[type="submit"] {
-        padding: 12px;
-        background-color: #00ffb3;
-        border: none;
-        border-radius: 6px;
-        font-size: 16px;
-        cursor: pointer;
-        width: 150px;
-        align-self: flex-start;
-      }
-
-      footer.footer {
-        background-color: #000000;
-        color: white;
-        padding: 20px 10px;
-        text-align: center;
         font-size: 13px;
       }
 
-      footer.footer a {
-        color: #00ffb3;
-        text-decoration: none;
-        margin: 0 8px;
-        display: inline-block;
+      input[type="submit"] {
+        font-size: 15px;
+        width: 100%;
       }
 
-      footer.footer a:hover {
-        text-decoration: underline;
+      footer.footer {
+        font-size: 12px;
+        padding: 15px 5px;
       }
 
-      footer.footer .social-links {
-        display: inline;
+      footer.footer .social-links a {
+        display: block;
+        margin: 5px 0;
       }
+    }
+  </style>
+</head>
 
-      @media screen and (max-width: 600px) {
-  .logo {
-    justify-content: center;
-    margin-top: 20px;
-  }
+<body>
+  <div class="logo">
+    <img src="ChatGPT Image Jun 25, 2025, 05_04_39 PM.png" alt="KC Football Academy Logo">
+  </div>
 
-  .logo img {
-    height: 100px;
-    width: 100px;
-  }
+  <div class="contact-container">
+    <h1>CONTACT US</h1>
 
-  .contact-container {
-    padding: 20px;
-    margin: 30px auto 150px;
-  }
-
-  h1 {
-    font-size: 24px;
-    margin-bottom: 60px;
-  }
-
-  h2 {
-    font-size: 18px;
-  }
-
-  input[type="text"],
-  textarea {
-    font-size: 13px;
-  }
-
-  input[type="submit"] {
-    width: 100%;
-    font-size: 15px;
-  }
-
-  footer.footer {
-    font-size: 12px;
-    padding: 15px 8px;
-  }
-
-  footer.footer span,
-  footer.footer .social-links a {
-    display: block;
-    margin: 4px 0;
-    text-align: center;
-  }
-
-  footer.footer .social-links {
-    margin-top: 8px;
-  }
-}
-    </style>
-  </head>
-
-  <body>
-    <div class="logo">
-      <img src="ChatGPT Image Jun 25, 2025, 05_04_39 PM.png" alt="KC Football Academy Logo">
+    <div class="section">
+      <h2>CONTACT INFORMATION</h2>
+      <hr>
+      <p><strong>Address:</strong> E-7, Sector 108, Gurugram, India</p>
+      <p><strong>Phone No:</strong> +91-8010811811 / 9877187632</p>
+      <p><strong>E-mail:</strong> info@kcfootballacademy.com</p>
     </div>
-    <div class="contact-container">
-      <h1>CONTACT US</h1>
-      <div class="section">
-        <h2>CONTACT INFORMATION</h2>
-        <hr>
-        <p><strong>Address:</strong> E-7, Sector 108, Gurugram, India</p>
-        <p><strong>Phone No:</strong> +91-8010811811 / 9877187632</p>
-        <p><strong>E-mail:</strong> info@kcfootballacademy.com</p>
-      </div>
 
-      <div class="section">
-        <h2>INQUIRE WITH US</h2>
-        <hr>
-        <form name="f1" method="get">
-          <label>Full Name</label>
-          <input type="text" maxlength="30" placeholder="Enter your name">
+    <div class="section">
+      <h2>INQUIRE WITH US</h2>
+      <hr>
+      <form name="f1" method="get">
+        <label>Full Name</label>
+        <input type="text" maxlength="30" placeholder="Enter your name">
 
-          <label>Mobile No.</label>
-          <input type="text" maxlength="15" placeholder="Enter your mobile number">
+        <label>Mobile No.</label>
+        <input type="text" maxlength="15" placeholder="Enter your mobile number">
 
-          <label>Email</label>
-          <input type="text" maxlength="30" placeholder="Enter your email">
+        <label>Email</label>
+        <input type="text" maxlength="30" placeholder="Enter your email">
 
-          <label>Message</label>
-          <textarea rows="4" cols="75" placeholder="Your message here..."></textarea>
+        <label>Message</label>
+        <textarea rows="4" cols="75" placeholder="Your message here..."></textarea>
 
-          <input type="submit" value="Submit">
-        </form>
-      </div>
+        <input type="submit" value="Submit">
+      </form>
     </div>
-    <footer class="footer">
-      <div>
-        <span>&copy; 2025 KC Football Academy. All rights reserved. Dhruv Kapoor<br>
-          KC Football Academy is an independent entity and not affiliated with any other organisation or its subsidiaries.
-          <br><br>
-          Follow us on:</span>
-        <span class="social-links">
-          <a href="#" target="_blank">Facebook</a> |
-          <a href="#" target="_blank">Twitter</a> |
-          <a href="#" target="_blank">Instagram</a>
-        </span>
-      </div>
-    </footer>
-  </body>
+  </div>
+
+  <footer class="footer">
+    <div>
+      <span>&copy; 2025 KC Football Academy. All rights reserved. Dhruv Kapoor<br>
+        KC Football Academy is an independent entity and not affiliated with any other organisation or its subsidiaries.
+        <br><br>
+        Follow us on:</span>
+      <span class="social-links">
+        <a href="#" target="_blank">Facebook</a> |
+        <a href="#" target="_blank">Twitter</a> |
+        <a href="#" target="_blank">Instagram</a>
+      </span>
+    </div>
+  </footer>
+</body>
 
 </html>
