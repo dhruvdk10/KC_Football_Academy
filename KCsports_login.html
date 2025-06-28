@@ -13,7 +13,6 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        text-decoration: none;
       }
 
       body {
@@ -24,6 +23,7 @@
         background-attachment: fixed;
         position: relative;
         min-height: 100vh;
+        color: #fff;
       }
 
       body::before {
@@ -42,11 +42,22 @@
         display: flex;
         align-items: center;
         padding: 0px 5px;
+        justify-content: center;
       }
 
       .logo img {
         height: 130px;
         width: 130px;
+      }
+
+      .logo-text {
+        color: #ffffff;
+        line-height: 1.2;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1rem;
+        letter-spacing: 2px;
+        margin-left: 10px;
       }
 
       .logo-text .big-letter {
@@ -156,25 +167,26 @@
         input[type="submit"] {
           font-size: 15px;
         }
-  footer.footer {
-    font-size: 12px;
-    padding: 15px 8px;
-  }
 
-footer.footer span {
-  display: block;
-  margin: 4px 0;
-  text-align: center;
-}
-footer.footer .social-links a {
-  display: inline-block;
-  margin: 0 8px;
-  text-align: center;
-}
+        footer.footer {
+          font-size: 12px;
+          padding: 15px 8px;
+        }
 
-  footer.footer .social-links {
-    margin-top: 8px;
-  }
+        footer.footer span {
+          display: block;
+          margin: 4px 0;
+          text-align: center;
+        }
+        footer.footer .social-links a {
+          display: inline-block;
+          margin: 0 8px;
+          text-align: center;
+        }
+
+        footer.footer .social-links {
+          margin-top: 8px;
+        }
       }
     </style>
   </head>
@@ -202,9 +214,10 @@ footer.footer .social-links a {
 
     <footer class="footer">
       <div>
-       <span>&copy; 2025 KC Football Academy. All rights reserved. Dhruv Kapoor<br>
+        <span>&copy; 2025 KC Football Academy. All rights reserved. Dhruv Kapoor<br>
           KC Football Academy is an independent entity and not affiliated with any other organisation or its subsidiaries.<br><br>
-          Follow us on:<br><br></span>
+          Follow us on:<br>
+        </span>
         <span class="social-links">
           <a href="#" target="_blank">
             <i class="fa-brands fa-facebook-f" style="color:#00ffb3; font-size:20px; vertical-align:middle;"></i>
