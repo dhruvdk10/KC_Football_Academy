@@ -52,10 +52,9 @@
         padding: 0 30px;
         font-size: 16px;
         line-height: 1.8;
-        box-shadow: none;
-        background: none;
-        border-left: none;
-        border-right: none;
+        background-color: rgba(0, 0, 0, 0.75);
+        box-shadow: 0 0 10px white;
+        border-radius: 12px;
         margin-bottom: 50px;
       }
 
@@ -140,7 +139,7 @@
       }
       .testimonial-quote {
         background-color: rgba(0, 0, 0, 0.75);
-        border-left: 4px solid;
+        border-left: 4px solid #00ffb3;
         box-shadow: 0 0 10px white;
         border-radius: 8px;
         margin: 0 auto 18px auto;
@@ -167,16 +166,17 @@
         text-align: center;
       }
 
-      .mission h2{
-        color: #00ffb3; 
+      .mission h2 {
+        color: #00ffb3;
+      }
 
       .cta {
         text-align: center;
         margin: 30px 0 60px 0;
       }
       .cta-btn {
-        background: rgba(255, 255, 255, 0.75);
-        color: black;
+        background: #00ffb3;
+        color: #000;
         padding: 12px 32px;
         border-radius: 24px;
         font-size: 18px;
@@ -184,11 +184,13 @@
         border: none;
         cursor: pointer;
         text-decoration: none;
-        transition: background 0.2s;
+        transition: background 0.2s, color 0.2s;
+        box-shadow: 0 0 8px #00ffb3;
+        display: inline-block;
       }
       .cta-btn:hover {
-        background: #00ffb3;
-        color: black;
+        background: #00d99b;
+        color: #fff;
       }
 
       footer.footer {
@@ -197,6 +199,8 @@
         padding: 20px 10px;
         text-align: center;
         font-size: 13px;
+        position: relative;
+        z-index: 1;
       }
 
       footer.footer a {
@@ -348,8 +352,9 @@
     </div>
 
     <div class="mission">
-      <h2>OUR MISSION</h2><br>
-      <p>To inspire and develop the next generation of football stars by providing world-class coaching,<br> a supportive environment, and opportunities for every player to shine.</p>
+      <h2>OUR MISSION</h2>
+      <p>To inspire and develop the next generation of football stars by providing world-class coaching,
+        a supportive environment, and opportunities for every player to shine.</p>
     </div>
 
     <div class="cta">
@@ -360,7 +365,7 @@
       <div>
         <span>&copy; 2025 KC Football Academy. All rights reserved. Dhruv Kapoor<br>
           KC Football Academy is an independent entity and not affiliated with any other organisation or its subsidiaries.<br><br>
-          Follow us on:<br><br>
+          Follow us on:<br>
         </span>
         <span class="social-links">
           <a href="#" target="_blank">
@@ -375,6 +380,3 @@
         </span>
       </div>
     </footer>
-  </body>
-
-</html>
