@@ -222,61 +222,41 @@
         display: inline;
       }
 
-     @media screen and (max-width: 768px) {
-  form {
-    padding: 20px;
-    margin: 40px auto 120px;
-    height: auto;
+    @media screen and (max-width: 768px) {
+  .logo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 100px;
+    height: 100px;
   }
 
   h1 {
-    font-size: 22px;
-    margin-bottom: 30px;
+    font-size: 24px;
   }
 
   .input-group input {
-    font-size: 12px;
+    font-size: 13px;
   }
 
-  .options {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    font-size: 12px;
-  }
-
+  .checkbox,
+  .links,
+  .divider span,
+  p,
   button {
-    font-size: 14px;
-    height: 42px;
-  }
-
-  .divider span {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .line {
     width: 60px;
   }
 
-  p {
-    font-size: 12px;
-  }
-
   .icon {
     width: 35px;
     height: 35px;
     font-size: 14px;
-  }
-
-  .logo {
-    flex-direction: column;
-    text-align: center;
-    margin-top: 20px;
-  }
-
-  .logo img {
-    width: 100px;
-    height: 100px;
   }
 
   footer.footer {
@@ -295,10 +275,11 @@
   }
 
   footer.footer .social-links a {
+    display: inline-block;
     margin: 0 8px;
+    text-align: center;
   }
 }
-
     </style>
   </head>
 
