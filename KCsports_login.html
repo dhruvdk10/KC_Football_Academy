@@ -222,19 +222,9 @@
       }
 
      @media screen and (max-width: 768px) {
-  .logo {
-    flex-direction: column;
-    text-align: center;
-    margin-top: 20px;
-  }
-
-  .logo img {
-    width: 100px;
-    height: 100px;
-  }
-
   form {
-    width: 90%;
+    width: 400px;
+    max-width: 100%;
     padding: 20px;
     margin: 40px auto 120px;
     height: auto;
@@ -245,16 +235,6 @@
     margin-bottom: 30px;
   }
 
-  .input-group {
-    height: 42px;
-    padding-left: 10px;
-  }
-
-  .input-group i {
-    font-size: 16px;
-    margin-right: 10px;
-  }
-
   .input-group input {
     font-size: 13px;
   }
@@ -262,16 +242,13 @@
   .options {
     flex-direction: column;
     align-items: flex-start;
+    gap: 10px;
     font-size: 13px;
-    gap: 8px;
-    margin-bottom: 20px;
   }
 
   button {
     font-size: 15px;
     height: 42px;
-    width: 100%;
-    margin-bottom: 30px;
   }
 
   .divider span {
@@ -286,16 +263,21 @@
     font-size: 13px;
   }
 
-  .social-icons {
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-  }
-
   .icon {
     width: 35px;
     height: 35px;
     font-size: 14px;
+  }
+
+  .logo {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .logo img {
+    width: 100px;
+    height: 100px;
   }
 
   footer.footer {
@@ -309,14 +291,12 @@
     text-align: center;
   }
 
-  footer.footer .social-links a {
-    display: inline-block;
-    margin: 0 8px;
-    text-align: center;
-  }
-
   footer.footer .social-links {
     margin-top: 8px;
+  }
+
+  footer.footer .social-links a {
+    margin: 0 8px;
   }
 }
 
