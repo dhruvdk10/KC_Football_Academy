@@ -92,28 +92,33 @@
       }
 
       .nav-links li {
-        list-style: none;
-        border: 1px solid black;
-        padding: 12px 20px;
-        border-radius: 10px;
-        background-color: rgba(255, 255, 255, 0.75);
-        transition: background-color 0.3s ease;
-        cursor: pointer;
-      }
+  list-style: none;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.75);
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  padding: 0; /
+  overflow: hidden;
+}
 
-      .nav-links li:hover {
-        background-color: #00ffb3;
-      }
+.nav-links li a.full-link {
+  display: block;
+  padding: 12px 20px;
+  color: black;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+}
 
-      .nav-links li a {
-        text-decoration: none;
-        color: black;
-        font-weight: bold;
-      }
+.nav-links li:hover {
+  background-color: #00ffb3;
+}
 
-      .nav-links li:hover a {
-        color: black;
-      }
+.nav-links li:hover a.full-link {
+  color: black;
+}
+
 
       .about-highlight {
         display: flex;
@@ -274,10 +279,10 @@
         </p>
       </div>
       <ul class="nav-links">
-        <li><a href="KCsports_login.html"><i class="fa-solid fa-key"></i> LOG IN</a></li>
-        <li><a href="KCsports_contactus.html"><i class="fa-solid fa-phone"></i> CONTACT US</a></li>
-        <li><a href="KCsports_highlights.html"><i class="fa-solid fa-star"></i> HIGHLIGHTS</a></li>
-        <li><a href="KCsports_aboutus.html"><i class="fa-solid fa-circle-info"></i> ABOUT US</a></li>
+        <li><a href="KCsports_login.html" class="full-link"><i class="fa-solid fa-key"></i> LOG IN</a></li>
+        <li><a href="KCsports_contactus.html" class="full-link"><i class="fa-solid fa-phone"></i> CONTACT US</a></li>
+        <li><a href="KCsports_highlights.html" class="full-link"><i class="fa-solid fa-star"></i> HIGHLIGHTS</a></li>
+        <li><a href="KCsports_aboutus.html" class="full-link"><i class="fa-solid fa-circle-info"></i> ABOUT US</a></li>
       </ul>
     </div>
 
