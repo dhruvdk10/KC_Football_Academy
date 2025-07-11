@@ -221,21 +221,43 @@
         display: inline;
       }
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 768px) {
+  .logo {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .logo img {
+    width: 100px;
+    height: 100px;
+  }
+
   form {
-    width: 400px;
+    width: 90%;
+    margin: 40px auto 120px;
+    padding: 25px 20px;
     height: auto;
-    margin: 60px auto 100px;
-    padding: 25px; 
   }
 
   h1 {
-    font-size: 22px;
-    margin-bottom: 30px;
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+  .input-group {
+    height: 42px;
+    padding-left: 10px;
+  }
+
+  .input-group i {
+    font-size: 16px;
+    margin-right: 10px;
   }
 
   .input-group input {
     font-size: 13px;
+    padding-right: 8px;
   }
 
   .options {
@@ -243,61 +265,60 @@
     align-items: flex-start;
     gap: 10px;
     font-size: 13px;
+    margin-bottom: 20px;
   }
 
   button {
     font-size: 15px;
     height: 42px;
-  }
-
-  .line {
-    width: 60px;
+    margin-bottom: 30px;
+    width: 100%;
   }
 
   .divider span {
     font-size: 13px;
   }
 
+  .line {
+    width: 70px;
+  }
+
   p {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .icon {
     width: 35px;
     height: 35px;
+    font-size: 14px;
   }
 
-  .logo {
-          justify-content: center;
-          flex-direction: column;
-          text-align: center;
-        }
+  .social-icons {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
 
-        .logo img {
-          width: 100px;
-          height: 100px;
-        }
+  footer.footer {
+    font-size: 10px;
+    padding: 15px 8px;
+  }
 
-        footer.footer {
-          font-size: 10px;
-          padding: 15px 8px;
-        }
+  footer.footer span {
+    display: block;
+    margin: 4px 0;
+    text-align: center;
+  }
 
-        footer.footer span {
-          display: block;
-          margin: 4px 0;
-          text-align: center;
-        }
-        footer.footer .social-links a {
-          display: inline-block;
-          margin: 0 8px;
-          text-align: center;
-        }
+  footer.footer .social-links a {
+    display: inline-block;
+    margin: 0 8px;
+    text-align: center;
+  }
 
-          footer.footer .social-links {
-          margin-top: 8px;
-        }
-      }
+  footer.footer .social-links {
+    margin-top: 8px;
+  }
+}
     </style>
   </head>
 
