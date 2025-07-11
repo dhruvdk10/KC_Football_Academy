@@ -222,7 +222,7 @@
         display: inline;
       }
 
-    @media screen and (max-width: 768px) {
+   @media screen and (max-width: 768px) {
   .logo {
     flex-direction: column;
     text-align: center;
@@ -233,13 +233,27 @@
     height: 100px;
   }
 
-  form{
+  form {
+    width: 90%;
+    max-width: 400px;
     padding: 20px;
-          margin-bottom: 120px;
-    }
+    margin: 30px auto 120px auto;
+  }
 
   h1 {
     font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+  .input-group {
+    height: 40px;
+    margin-bottom: 15px;
+    padding-left: 12px;
+  }
+
+  .input-group i {
+    font-size: 16px;
+    margin-right: 10px;
   }
 
   .input-group input {
@@ -249,9 +263,19 @@
   .checkbox,
   .links,
   .divider span,
-  p,
-  button {
+  p {
     font-size: 13px;
+  }
+
+  .options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  button {
+    font-size: 15px;
+    height: 42px;
   }
 
   .line {
