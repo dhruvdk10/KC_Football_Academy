@@ -18,16 +18,19 @@
 
       body {
         font-family: 'Poppins', sans-serif;
+        color: #fff;
+      }
+
+      .hero-banner {
         background-image: url('https://images.unsplash.com/photo-1735736158949-a22521878828?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
         height: 100vh;
         background-size: cover;
         background-attachment: fixed;
         background-repeat: no-repeat;
-        color: #fff;
         position: relative;
       }
 
-      body::before {
+      .hero-banner::before {
         content: "";
         position: fixed;
         top: 0;
@@ -51,7 +54,7 @@
         cursor: pointer;
       }
 
-      .header {
+      .navbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -235,7 +238,7 @@
       }
 
       @media screen and (max-width: 768px) {
-        .header {
+        .navbar {
           flex-direction: column;
           text-align: center;
         }
@@ -320,7 +323,7 @@
   </head>
 
   <body>
-    <div class="header">
+    <nav class="navbar fixed-top">
       <div class="logo">
         <img src="logo.png" alt="KC Football Academy Logo">
         <p class="logo-text">
@@ -334,47 +337,49 @@
         <li><a href="KCsports_highlights.html" class="full-link"><i class="fa-solid fa-star"></i> HIGHLIGHTS</a></li>
         <li><a href="KCsports_aboutus.html" class="full-link"><i class="fa-solid fa-circle-info"></i> ABOUT US</a></li>
       </ul>
-    </div>
+    </nav>
 
-    <div class="about-highlight">
-      <div class="about-card">
-        <i class="fa-solid fa-bolt"></i>
-        <h3>Dynamic Training</h3>
-        <p>Our high-energy sessions are designed to improve agility, speed, and game intelligence with real-time strategy drills.</p>
+    <section class="hero-banner">
+      <div class="about-highlight">
+        <div class="about-card">
+          <i class="fa-solid fa-bolt"></i>
+          <h3>Dynamic Training</h3>
+          <p>Our high-energy sessions are designed to improve agility, speed, and game intelligence with real-time strategy drills.</p>
+        </div>
+        <div class="about-card">
+          <i class="fa-solid fa-shield-heart"></i>
+          <h3>Player Wellness</h3>
+          <p>We prioritize mental and physical wellness through injury prevention programs and personal development support.</p>
+        </div>
+        <div class="about-card">
+          <i class="fa-solid fa-globe"></i>
+          <h3>Global Exposure</h3>
+          <p>Our academy offers international collaboration and exchange programs to provide players with global opportunities.</p>
+        </div>
       </div>
-      <div class="about-card">
-        <i class="fa-solid fa-shield-heart"></i>
-        <h3>Player Wellness</h3>
-        <p>We prioritize mental and physical wellness through injury prevention programs and personal development support.</p>
-      </div>
-      <div class="about-card">
-        <i class="fa-solid fa-globe"></i>
-        <h3>Global Exposure</h3>
-        <p>Our academy offers international collaboration and exchange programs to provide players with global opportunities.</p>
-      </div>
-    </div>
 
 
-    <div class="center-text">
-      JUST PLAY.<br>
-      <p>HAVE FUN.</p>
-      ENJOY THE GAME.
-    </div>
+      <div class="center-text">
+        JUST PLAY.<br>
+        <p>HAVE FUN.</p>
+        ENJOY THE GAME.
+      </div>
 
-    <div class="stats-row">
-      <div class="stat-box">
-        <h2>200+</h2>
-        <p>Players Trained</p>
+      <div class="stats-row">
+        <div class="stat-box">
+          <h2>200+</h2>
+          <p>Players Trained</p>
+        </div>
+        <div class="stat-box">
+          <h2>15</h2>
+          <p>Tournaments Won</p>
+        </div>
+        <div class="stat-box">
+          <h2>10+</h2>
+          <p>Expert Coaches</p>
+        </div>
       </div>
-      <div class="stat-box">
-        <h2>15</h2>
-        <p>Tournaments Won</p>
-      </div>
-      <div class="stat-box">
-        <h2>10+</h2>
-        <p>Expert Coaches</p>
-      </div>
-    </div>
+    </section>
 
     <footer class="footer">
       <div>
