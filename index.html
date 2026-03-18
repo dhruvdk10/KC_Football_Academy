@@ -4,403 +4,403 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KC Football Academy</title>
-    <script src="https://kit.fontawesome.com/da1a8618a8.js" crossorigin="anonymous"></script>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KC Football Academy</title>
+  <script src="https://kit.fontawesome.com/da1a8618a8.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      body {
-        font-family: 'Poppins', sans-serif;
-        color: #fff;
-      }
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+    }
 
-      .hero-banner {
-        background-image: url('https://images.unsplash.com/photo-1735736158949-a22521878828?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-        height: 100vh;
-        background-size: cover;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        position: relative;
-      }
+    .hero-banner {
+      background-image: url('https://images.unsplash.com/photo-1735736158949-a22521878828?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+      height: 100vh;
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      position: relative;
+      overflow: hidden;
+    }
 
-      .hero-banner::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: inherit;
-        filter: brightness(50%);
-        z-index: -1;
-      }
+    .hero-banner::before {
+      content: "";
+      position: absolute; /* changed from fixed */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: inherit;
+      filter: brightness(50%);
+      z-index: -1;
+    }
 
-      i {
-        color: black;
-        font-size: 18px;
-        cursor: pointer;
-        margin-right: 5px;
-      }
+    i {
+      color: black;
+      font-size: 18px;
+      cursor: pointer;
+      margin-right: 5px;
+    }
 
-      a {
-        text-decoration: none;
-        cursor: pointer;
-      }
+    a {
+      text-decoration: none;
+      cursor: pointer;
+    }
 
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 5px;
+      flex-wrap: wrap;
+      background-color: #000000;
+      position: fixed;
+      width: 100%;
+      z-index: 10; /* fixed navbar stacking */
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 130px;
+      width: 130px;
+    }
+
+    .logo-text {
+      color: #ffffff;
+      line-height: 1.2;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      margin-left: 10px;
+    }
+
+    .logo-text .big-letter {
+      font-size: 1.2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .nav-links li {
+      list-style: none;
+      border: 1px solid black;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.75);
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .nav-links li a.full-link {
+      display: block;
+      padding: 12px 20px;
+      color: black;
+      font-weight: bold;
+      width: 100%;
+      height: 100%;
+    }
+
+    .nav-links li:hover {
+      background-color: #00ffb3;
+    }
+
+    .nav-links li:hover a.full-link {
+      color: black;
+    }
+
+    .about-highlight {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      margin: 40px 0;
+    }
+
+    .about-card {
+      background-color: rgba(0, 0, 0, 0.75);
+      border-radius: 12px;
+      box-shadow: 0 0 10px white;
+      padding: 18px 16px;
+      max-width: 300px;
+      min-width: 220px;
+      text-align: center;
+      flex: 1 1 220px;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .about-card:hover {
+      transform: scale(1.05);
+      border-color: #a1a0a0;
+    }
+
+    .about-card i {
+      font-size: 32px;
+      color: #00ffb3;
+      margin-bottom: 10px;
+    }
+
+    .about-card h3 {
+      color: #C0C0C0;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .about-card p {
+      font-size: 15px;
+      color: white;
+      margin-bottom: 0;
+    }
+
+    .center-text {
+      text-align: center;
+      font-size: 40px;
+      font-weight: bold;
+      margin-top: 100px;
+      margin-bottom: 100px;
+      color: white;
+      text-shadow: 2px 2px 5px black;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .center-text p {
+      color: #00ffb3;
+    }
+
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin: 40px 0 140px 0;
+      flex-wrap: wrap;
+    }
+
+    .stat-box {
+      background-color: rgba(0, 0, 0, 0.75);
+      border-radius: 10px;
+      padding: 18px 24px;
+      text-align: center;
+      min-width: 120px;
+      box-shadow: 0 0 10px white;
+    }
+
+    .stat-box h2 {
+      color: #00ffb3;
+      font-size: 28px;
+      margin-bottom: 4px;
+      margin-top: 0;
+      text-shadow: none;
+    }
+
+    .stat-box p {
+      color: #fff;
+      font-size: 13px;
+      margin: 0;
+    }
+
+    footer.footer {
+      background-color: #000000;
+      color: white;
+      padding: 20px 10px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    footer.footer a {
+      color: #00ffb3;
+      text-decoration: none;
+      margin: 0 8px;
+      display: inline-block;
+    }
+
+    footer.footer a:hover {
+      text-decoration: underline;
+    }
+
+    footer.footer .social-links {
+      display: inline;
+    }
+
+    @media screen and (max-width: 768px) {
       .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 5px;
-        flex-wrap: wrap;
-        background-color: #000000;
-        position: fixed;
+        flex-direction: column;
+        text-align: center;
       }
 
       .logo {
-        display: flex;
-        align-items: center;
-      }
-
-      .logo img {
-        height: 130px;
-        width: 130px;
-      }
-
-      .logo-text {
-        color: #ffffff;
-        line-height: 1.2;
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: 1rem;
-        letter-spacing: 2px;
-        margin-left: 10px;
-      }
-
-      .logo-text .big-letter {
-        font-size: 1.2rem;
+        flex-direction: column;
       }
 
       .nav-links {
-        display: flex;
-        align-items: center;
         justify-content: center;
-        gap: 12px;
-        flex-wrap: wrap;
         margin-top: 10px;
       }
 
-      .nav-links li {
-        list-style: none;
-        border: 1px solid black;
-        border-radius: 10px;
-        background-color: rgba(255, 255, 255, 0.75);
-        transition: background-color 0.3s ease;
-        cursor: pointer;
-        padding: 0;
-        overflow: hidden;
-      }
-
-      .nav-links li a.full-link {
-        display: block;
-        padding: 12px 20px;
-        color: black;
-        font-weight: bold;
-        width: 100%;
-        height: 100%;
-      }
-
-      .nav-links li:hover {
-        background-color: #00ffb3;
-      }
-
-      .nav-links li:hover a.full-link {
-        color: black;
-      }
-
-
       .about-highlight {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 24px;
-        margin: 40px 0;
+        gap: 10px;
       }
 
       .about-card {
-        background-color: rgba(0, 0, 0, 0.75);
-        border-radius: 12px;
-        box-shadow: 0 0 10px white;
-        padding: 18px 16px;
-        max-width: 300px;
-        min-width: 220px;
-        text-align: center;
-        flex: 1 1 220px;
-        transition: transform 0.3s ease, border-color 0.3s ease;
-      }
-
-      .about-card:hover {
-        transform: scale(1.05);
-        border-color: #a1a0a0;
-      }
-
-      .about-card i {
-        font-size: 32px;
-        color: #00ffb3;
-        margin-bottom: 10px;
+        padding: 12px 6px;
+        font-size: 13px;
+        min-width: 140px;
       }
 
       .about-card h3 {
-        color: #C0C0C0;
-        margin-bottom: 8px;
-        font-size: 18px;
+        font-size: 20px;
+      }
+
+      .about-card i {
+        font-size: 24px;
       }
 
       .about-card p {
-        font-size: 15px;
-        color: white;
-        margin-bottom: 0;
+        font-size: 13px;
       }
-
 
       .center-text {
-        text-align: center;
-        font-size: 40px;
-        font-weight: bold;
-        margin-top: 100px;
-        margin-bottom: 100px;
-        color: white;
-        text-shadow: 2px 2px 5px black;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-      }
-
-      .center-text p {
-        color: #00ffb3;
+        font-size: 28px;
+        margin-bottom: 150px;
       }
 
       .stats-row {
-        display: flex;
-        justify-content: center;
-        gap: 32px;
-        margin: 40px 0 140px 0;
-        flex-wrap: wrap;
+        gap: 10px;
+        margin: 18px 0 18px 0;
       }
 
       .stat-box {
-        background-color: rgba(0, 0, 0, 0.75);
-        border-radius: 10px;
-        padding: 18px 24px;
-        text-align: center;
-        min-width: 120px;
-        box-shadow: 0 0 10px white;
+        padding: 10px 8px;
+        min-width: 80px;
       }
 
       .stat-box h2 {
-        color: #00ffb3;
-        font-size: 28px;
-        margin-bottom: 4px;
-        margin-top: 0;
-        text-shadow: none;
+        font-size: 20px;
       }
 
       .stat-box p {
-        color: #fff;
         font-size: 13px;
-        margin: 0;
       }
 
       footer.footer {
-        background-color: #000000;
-        color: white;
-        padding: 20px 10px;
+        font-size: 10px;
+        padding: 15px 8px;
+      }
+
+      footer.footer span {
+        display: block;
+        margin: 4px 0;
         text-align: center;
-        font-size: 13px;
       }
 
-      footer.footer a {
-        color: #00ffb3;
-        text-decoration: none;
-        margin: 0 8px;
+      footer.footer .social-links a {
         display: inline-block;
-      }
-
-      footer.footer a:hover {
-        text-decoration: underline;
+        margin: 0 8px;
+        text-align: center;
       }
 
       footer.footer .social-links {
-        display: inline;
+        margin-top: 8px;
       }
+    }
+  </style>
+</head>
 
-      @media screen and (max-width: 768px) {
-        .navbar {
-          flex-direction: column;
-          text-align: center;
-        }
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="KC Football Academy Logo">
+      <p class="logo-text">
+        <span class="big-letter">F</span>ootball <br>
+        <span class="big-letter">A</span>cademy
+      </p>
+    </div>
+    <ul class="nav-links">
+      <li><a href="KCsports_login.html" class="full-link"><i class="fa-solid fa-key"></i> LOG IN</a></li>
+      <li><a href="KCsports_contactus.html" class="full-link"><i class="fa-solid fa-phone"></i> CONTACT US</a></li>
+      <li><a href="KCsports_highlights.html" class="full-link"><i class="fa-solid fa-star"></i> HIGHLIGHTS</a></li>
+      <li><a href="KCsports_aboutus.html" class="full-link"><i class="fa-solid fa-circle-info"></i> ABOUT US</a></li>
+    </ul>
+  </nav>
 
-        .logo {
-          flex-direction: column;
-        }
-
-        .nav-links {
-          justify-content: center;
-          margin-top: 10px;
-        }
-
-        .about-highlight {
-          gap: 10px;
-        }
-
-        .about-card {
-          padding: 12px 6px;
-          font-size: 13px;
-          min-width: 140px;
-        }
-
-        .about-card h3 {
-          font-size: 20px;
-        }
-
-        .about-card i {
-          font-size: 24px;
-        }
-
-        .about-card p {
-          font-size: 13px;
-        }
-
-        .center-text {
-          font-size: 28px;
-          margin-bottom: 150px;
-        }
-
-        .stats-row {
-          gap: 10px;
-          margin: 18px 0 18px 0;
-        }
-
-        .stat-box {
-          padding: 10px 8px;
-          min-width: 80px;
-        }
-
-        .stat-box h2 {
-          font-size: 20px;
-        }
-
-        .stat-box p {
-          font-size: 13px;
-        }
-
-        footer.footer {
-          font-size: 10px;
-          padding: 15px 8px;
-        }
-
-        footer.footer span {
-          display: block;
-          margin: 4px 0;
-          text-align: center;
-        }
-
-        footer.footer .social-links a {
-          display: inline-block;
-          margin: 0 8px;
-          text-align: center;
-        }
-
-        footer.footer .social-links {
-          margin-top: 8px;
-        }
-
-      }
-    </style>
-  </head>
-
-  <body>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="logo.png" alt="KC Football Academy Logo">
-        <p class="logo-text">
-          <span class="big-letter">F</span>ootball <br>
-          <span class="big-letter">A</span>cademy
-        </p>
+  <section class="hero-banner">
+    <div class="about-highlight">
+      <div class="about-card">
+        <i class="fa-solid fa-bolt"></i>
+        <h3>Dynamic Training</h3>
+        <p>Our high-energy sessions are designed to improve agility, speed, and game intelligence with real-time strategy drills.</p>
       </div>
-      <ul class="nav-links">
-        <li><a href="KCsports_login.html" class="full-link"><i class="fa-solid fa-key"></i> LOG IN</a></li>
-        <li><a href="KCsports_contactus.html" class="full-link"><i class="fa-solid fa-phone"></i> CONTACT US</a></li>
-        <li><a href="KCsports_highlights.html" class="full-link"><i class="fa-solid fa-star"></i> HIGHLIGHTS</a></li>
-        <li><a href="KCsports_aboutus.html" class="full-link"><i class="fa-solid fa-circle-info"></i> ABOUT US</a></li>
-      </ul>
-    </nav>
-
-    <section class="hero-banner">
-      <div class="about-highlight">
-        <div class="about-card">
-          <i class="fa-solid fa-bolt"></i>
-          <h3>Dynamic Training</h3>
-          <p>Our high-energy sessions are designed to improve agility, speed, and game intelligence with real-time strategy drills.</p>
-        </div>
-        <div class="about-card">
-          <i class="fa-solid fa-shield-heart"></i>
-          <h3>Player Wellness</h3>
-          <p>We prioritize mental and physical wellness through injury prevention programs and personal development support.</p>
-        </div>
-        <div class="about-card">
-          <i class="fa-solid fa-globe"></i>
-          <h3>Global Exposure</h3>
-          <p>Our academy offers international collaboration and exchange programs to provide players with global opportunities.</p>
-        </div>
+      <div class="about-card">
+        <i class="fa-solid fa-shield-heart"></i>
+        <h3>Player Wellness</h3>
+        <p>We prioritize mental and physical wellness through injury prevention programs and personal development support.</p>
       </div>
-
-
-      <div class="center-text">
-        JUST PLAY.<br>
-        <p>HAVE FUN.</p>
-        ENJOY THE GAME.
+      <div class="about-card">
+        <i class="fa-solid fa-globe"></i>
+        <h3>Global Exposure</h3>
+        <p>Our academy offers international collaboration and exchange programs to provide players with global opportunities.</p>
       </div>
+    </div>
 
-      <div class="stats-row">
-        <div class="stat-box">
-          <h2>200+</h2>
-          <p>Players Trained</p>
-        </div>
-        <div class="stat-box">
-          <h2>15</h2>
-          <p>Tournaments Won</p>
-        </div>
-        <div class="stat-box">
-          <h2>10+</h2>
-          <p>Expert Coaches</p>
-        </div>
-      </div>
-    </section>
+    <div class="center-text">
+      JUST PLAY.<br>
+      <p>HAVE FUN.</p>
+      ENJOY THE GAME.
+    </div>
 
-    <footer class="footer">
-      <div>
-        <span>&copy; 2025 KC Football Academy. All rights reserved. Dhruv Kapoor<br>
-          KC Football Academy is an independent entity and not affiliated with any other organisation or its subsidiaries.<br><br>
-          Follow us on:<br><br></span>
-        <span class="social-links">
-          <a href="#" target="_blank">
-            <i class="fa-brands fa-facebook-f" style="color:#00ffb3; font-size:20px; vertical-align:middle;"></i>
-          </a>
-          <a href="#" target="_blank">
-            <i class="fa-brands fa-x-twitter" style="color:#00ffb3; font-size:20px; vertical-align:middle;"></i>
-          </a>
-          <a href="#" target="_blank">
-            <i class="fa-brands fa-instagram" style="color:#00ffb3; font-size:20px; vertical-align:middle;"></i>
-          </a>
-        </span>
+    <div class="stats-row">
+      <div class="stat-box">
+        <h2>200+</h2>
+        <p>Players Trained</p>
       </div>
-    </footer>
-  </body>
+      <div class="stat-box">
+        <h2>15</h2>
+        <p>Tournaments Won</p>
+      </div>
+      <div class="stat-box">
+        <h2>10+</h2>
+        <p>Expert Coaches</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div>
+      <span>&copy; 2025 KC Football Academy. All rights reserved. Dhruv Kapoor<br>
+        KC Football Academy is an independent entity and not affiliated with any other organisation or its subsidiaries.<br><br>
+        Follow us on:<br><br>
+      </span>
+      <span class="social-links">
+        <a href="#" target="_blank">
+          <i class="fa-brands fa-facebook-f" style="color:#00ffb3; font-size:20px; vertical-align:middle;"></i>
+        </a>
+        <a href="#" target="_blank">
+          <i class="fa-brands fa-x-twitter" style="color:#00ffb3; font-size:20px; vertical-align:middle;"></i>
+        </a>
+        <a href="#" target="_blank">
+          <i class="fa-brands fa-instagram" style="color:#00ffb3; font-size:20px; vertical-align:middle;"></i>
+        </a>
+      </span>
+    </div>
+  </footer>
+</body>
 
 </html>
