@@ -93,32 +93,32 @@
       }
 
       .nav-links li {
-  list-style: none;
-  border: 1px solid black;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.75);
-  transition: background-color 0.3s ease;
-  cursor: pointer;
-  padding: 0;
-  overflow: hidden;
-}
+        list-style: none;
+        border: 1px solid black;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.75);
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+        padding: 0;
+        overflow: hidden;
+      }
 
-.nav-links li a.full-link {
-  display: block;
-  padding: 12px 20px;
-  color: black;
-  font-weight: bold;
-  width: 100%;
-  height: 100%;
-}
+      .nav-links li a.full-link {
+        display: block;
+        padding: 12px 20px;
+        color: black;
+        font-weight: bold;
+        width: 100%;
+        height: 100%;
+      }
 
-.nav-links li:hover {
-  background-color: #00ffb3;
-}
+      .nav-links li:hover {
+        background-color: #00ffb3;
+      }
 
-.nav-links li:hover a.full-link {
-  color: black;
-}
+      .nav-links li:hover a.full-link {
+        color: black;
+      }
 
 
       .about-highlight {
@@ -170,7 +170,7 @@
         font-size: 40px;
         font-weight: bold;
         margin-top: 100px;
-        margin-bottom: 150px;
+        margin-bottom: 100px;
         color: white;
         text-shadow: 2px 2px 5px black;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -178,6 +178,37 @@
 
       .center-text p {
         color: #00ffb3;
+      }
+
+      .stats-row {
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+        margin: 40px 0 140px 0;
+        flex-wrap: wrap;
+      }
+
+      .stat-box {
+        background-color: rgba(0, 0, 0, 0.75);
+        border-radius: 10px;
+        padding: 18px 24px;
+        text-align: center;
+        min-width: 120px;
+        box-shadow: 0 0 10px white;
+      }
+
+      .stat-box h2 {
+        color: #00ffb3;
+        font-size: 28px;
+        margin-bottom: 4px;
+        margin-top: 0;
+        text-shadow: none;
+      }
+
+      .stat-box p {
+        color: #fff;
+        font-size: 13px;
+        margin: 0;
       }
 
       footer.footer {
@@ -245,6 +276,24 @@
           margin-bottom: 150px;
         }
 
+        .stats-row {
+          gap: 10px;
+          margin: 18px 0 18px 0;
+        }
+
+        .stat-box {
+          padding: 10px 8px;
+          min-width: 80px;
+        }
+
+        .stat-box h2 {
+          font-size: 20px;
+        }
+
+        .stat-box p {
+          font-size: 13px;
+        }
+
         footer.footer {
           font-size: 10px;
           padding: 15px 8px;
@@ -310,6 +359,21 @@
       JUST PLAY.<br>
       <p>HAVE FUN.</p>
       ENJOY THE GAME.
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-box">
+        <h2>200+</h2>
+        <p>Players Trained</p>
+      </div>
+      <div class="stat-box">
+        <h2>15</h2>
+        <p>Tournaments Won</p>
+      </div>
+      <div class="stat-box">
+        <h2>10+</h2>
+        <p>Expert Coaches</p>
+      </div>
     </div>
 
     <footer class="footer">
