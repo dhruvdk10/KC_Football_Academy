@@ -19,6 +19,7 @@
     body {
       font-family: 'Poppins', sans-serif;
       color: #fff;
+      padding-top: 120px;
     }
 
     .hero-banner {
@@ -29,7 +30,6 @@
       background-repeat: no-repeat;
       position: relative;
       overflow: hidden;
-      margin-top: 130px;
     }
 
     .hero-banner::before {
@@ -60,12 +60,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 5px;
+      padding: 0 10px;
       flex-wrap: wrap;
       background-color: #000000;
-      position: fixed;
       width: 100%;
-      z-index: 10; /* fixed navbar stacking */
+      z-index: 10;
+      margin: 0;
     }
 
     .logo {
@@ -326,7 +326,7 @@
 </head>
 
 <body>
-  <nav class="navbar">
+  <nav class="navbar fixed-top">
     <div class="logo">
       <img src="logo.png" alt="KC Football Academy Logo">
       <p class="logo-text">
