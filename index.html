@@ -95,6 +95,14 @@
         font-size: 1.2rem;
       }
 
+      /* Toggle Button */
+      .menu-toggle {
+        display: none;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+      }
+
       .nav-links {
         display: flex;
         align-items: center;
@@ -251,84 +259,117 @@
 
       @media screen and (max-width: 768px) {
         .navbar {
-          flex-direction: column;
-          text-align: center;
+          flex-direction: row;
+          justify-content: space-between;
+          padding: 10px 15px;
         }
 
         .logo {
-          flex-direction: column;
+          flex-direction: row;
+        }
+
+        .logo img {
+          height: 70px;
+          width: 70px;
+        }
+
+        .logo-text {
+          font-size: 0.8rem;
+        }
+
+        .menu-toggle {
+          display: block;
         }
 
         .nav-links {
-          justify-content: center;
+          width: 100%;
+          flex-direction: column;
+          display: none;
+          background-color: black;
           margin-top: 10px;
+          border-radius: 10px;
+          overflow: hidden;
         }
 
-        .about-highlight {
-          gap: 10px;
+        .nav-links.active {
+          display: flex;
         }
 
-        .about-card {
-          padding: 12px 6px;
-          font-size: 13px;
-          min-width: 140px;
+        .nav-links li {
+          width: 100%;
+          border-radius: 0;
         }
 
-        .about-card h3 {
-          font-size: 20px;
-        }
-
-        .about-card i {
-          font-size: 24px;
-        }
-
-        .about-card p {
-          font-size: 13px;
-        }
-
-        .center-text {
-          font-size: 28px;
-          margin-bottom: 150px;
-        }
-
-        .stats-row {
-          gap: 10px;
-          margin: 18px 0 18px 0;
-        }
-
-        .stat-box {
-          padding: 10px 8px;
-          min-width: 80px;
-        }
-
-        .stat-box h2 {
-          font-size: 20px;
-        }
-
-        .stat-box p {
-          font-size: 13px;
-        }
-
-        footer.footer {
-          font-size: 10px;
-          padding: 15px 8px;
-        }
-
-        footer.footer span {
-          display: block;
-          margin: 4px 0;
+        .nav-links li a.full-link {
+          padding: 12px;
           text-align: center;
         }
 
-        footer.footer .social-links a {
-          display: inline-block;
-          margin: 0 8px;
-          text-align: center;
-        }
+      .about-highlight {
+        gap: 10px;
+      }
 
-        footer.footer .social-links {
-          margin-top: 8px;
-        }
+      .about-card {
+        padding: 12px 6px;
+        font-size: 13px;
+        min-width: 140px;
+      }
+
+      .about-card h3 {
+        font-size: 20px;
+      }
+
+      .about-card i {
+        font-size: 24px;
+      }
+
+      .about-card p {
+        font-size: 13px;
+      }
+
+      .center-text {
+        font-size: 28px;
+        margin-bottom: 150px;
+      }
+
+      .stats-row {
+        gap: 10px;
+        margin: 18px 0 18px 0;
+      }
+
+      .stat-box {
+        padding: 10px 8px;
+        min-width: 80px;
+      }
+
+      .stat-box h2 {
+        font-size: 20px;
+      }
+
+      .stat-box p {
+        font-size: 13px;
+      }
+
+      footer.footer {
+        font-size: 10px;
+        padding: 15px 8px;
+      }
+
+      footer.footer span {
+        display: block;
+        margin: 4px 0;
+        text-align: center;
+      }
+
+      footer.footer .social-links a {
+        display: inline-block;
+        margin: 0 8px;
+        text-align: center;
+      }
+
+      footer.footer .social-links {
+        margin-top: 8px;
+      }
       }
     </style>
   </head>
@@ -342,6 +383,11 @@
           <span class="big-letter">A</span>cademy
         </p>
       </div>
+
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
       <ul class="nav-links">
         <li><a href="KCsports_login.html" class="full-link"><i class="fa-solid fa-key"></i> LOG IN</a></li>
         <li><a href="KCsports_contactus.html" class="full-link"><i class="fa-solid fa-phone"></i> CONTACT US</a></li>
