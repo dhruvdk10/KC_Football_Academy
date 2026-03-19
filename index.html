@@ -23,7 +23,7 @@
 
       .hero-banner {
         background-image: url('https://images.unsplash.com/photo-1735736158949-a22521878828?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-        height: 100vh;
+        min-height: 100vh;
         background-size: cover;
         background-attachment: fixed;
         background-repeat: no-repeat;
@@ -98,9 +98,10 @@
       /* Toggle Button */
       .menu-toggle {
         display: none;
-        font-size: 24px;
+        font-size: 28px;
         color: white;
         cursor: pointer;
+        user-select: none;
       }
 
       .nav-links {
@@ -385,7 +386,7 @@
       </div>
 
       <div class="menu-toggle" id="menu-toggle">
-        <i class="fa-solid fa-bars"></i>
+        ☰
       </div>
 
       <ul class="nav-links">
